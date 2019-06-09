@@ -37,31 +37,31 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/names")
-def names():
-    """Return a list of sample names."""
+# @app.route("/names")
+# def names():
+#     """Return a list of sample names."""
 
-    # Use Pandas to perform the sql query
-    stmt = db.session.query(Samples).statement
-    df = pd.read_sql_query(stmt, db.session.bind)
+#     # Use Pandas to perform the sql query
+#     stmt = db.session.query(Samples).statement
+#     df = pd.read_sql_query(stmt, db.session.bind)
 
-    # Return a list of the column names (sample names)
-    return jsonify(list(df.columns)[2:])
+#     # Return a list of the column names (sample names)
+#     return jsonify(list(df.columns)[2:])
 
 
 
-@app.route("/samples/<sample>")
-def samples(sample):
-    """Return `otu_ids`, `otu_labels`,and `sample_values`."""
-    stmt = db.session.query(Samples).statement
-    sample_data = pd.read_sql_query(stmt, db.session.bind)
-    sample_data = sample_data.loc[sample_data[sample] > 1, ["Year", sample]]
-    # Format the data to send as json
-    data = {
-        "Year": sample_data.Year.values.tolist(),
-        "sample_values": sample_data[sample].values.tolist(),
-        }
-    return jsonify(data)
+# @app.route("/samples/<sample>")
+# def samples(sample):
+#     """Return `otu_ids`, `otu_labels`,and `sample_values`."""
+#     stmt = db.session.query(Samples).statement
+#     sample_data = pd.read_sql_query(stmt, db.session.bind)
+#     sample_data = sample_data.loc[sample_data[sample] > 1, ["Year", sample]]
+#     # Format the data to send as json
+#     data = {
+#         "Year": sample_data.Year.values.tolist(),
+#         "sample_values": sample_data[sample].values.tolist(),
+#         }
+#     return jsonify(data)
 
 
 if __name__ == "__main__":
