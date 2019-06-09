@@ -1,7 +1,7 @@
 body{
 	background-color: white;
 }
-.pagination a {
+/* .pagination a {
 	color: white;
 	float: left;
 	padding: 8px 16px;
@@ -15,11 +15,11 @@ body{
 	color: white;
   }
   
-  .pagination a:hover:not(.active) {background-color: #ddd;}
+  .pagination a:hover:not(.active) {background-color: #ddd;} */
 
 .jumbotron{
 	background: url('../images/stormyseas.jpg');
-	min-height: 600px;
+	min-height: 800px;
 	background-size: cover;
 }
 
