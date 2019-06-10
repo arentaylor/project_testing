@@ -1,0 +1,72 @@
+body{
+	background-color: white;
+}
+/* .pagination a {
+	color: white;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+	text-align: center; 
+	transition: background-color .3s;
+  }
+  
+  .pagination a.active {
+	background-color: dodgerblue;
+	color: white;
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;} */
+
+.jumbotron{
+	background: url("stormyseas.jpg");
+	min-height: 800px;
+	background-size: cover;
+}
+
+.custom-panel{
+	margin-top: 60px;
+}
+.panel-primary {
+    border-color: #e3e3e3;
+}
+.panel-primary>.panel-heading{
+	background-color:#78C2AD;
+	border-color:#e3e3e3; 
+}
+
+.panel-body {
+    background-color: #f5f5f5;
+}
+
+.banner-text h1{
+	font-family: "Source Sans Pro";
+	color: white;
+	font-size: 58px;
+	letter-spacing: 10px;
+	font-weight: bold;
+}
+
+.banner-text p{
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+/* Footer */
+footer{
+	background-color: rgb(53,131,141); 
+	border-top-style: solid; 
+	border-top-width: 5px; 
+	border-top-color: #647584;
+	color: white; 
+	min-height: 25px; 
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px; 
+	text-align: center; 
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding-top: 15px; 
+	}
