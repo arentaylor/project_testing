@@ -18,7 +18,7 @@ body{
   .pagination a:hover:not(.active) {background-color: #ddd;} */
 
 .jumbotron{
-	background: url("stormyseas.jpg");
+	background: url('../images/stormyseas.jpg');
 	min-height: 800px;
 	background-size: cover;
 }
