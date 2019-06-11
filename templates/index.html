@@ -76,13 +76,13 @@
         checkLoaded();
       }
     }
-    $.get('../db/gdp_per_capita_ppp_copy.csv',             parseTable(GDP, countriesWithGDP, yearsWithGDP));
-    $.get('../db/life_expectancy_at_birth_copy.csv',       parseTable(LE,  countriesWithLE,  yearsWithLE));
-    $.get('../db/copy_refugee.csv', parseTable(POP, countriesWithPOP, yearsWithPOP));
+    $.get('./db/gdp_per_capita_ppp_copy.csv',             parseTable(GDP, countriesWithGDP, yearsWithGDP));
+    $.get('./db/life_expectancy_at_birth_copy.csv',       parseTable(LE,  countriesWithLE,  yearsWithLE));
+    $.get('./db/copy_refugee.csv', parseTable(POP, countriesWithPOP, yearsWithPOP));
     var colors = [ '#3F4FFF', '#2FBFE5', '#68FF5E', '#E5FF2F', '#FF982F', '#FF2F2F' ],
         regions = [];
         countryRegions = {};
-    $.get('../b/data/copy_refugee.csv', function(csv) {
+    $.get('./db/data/copy_refugee.csv', function(csv) {
       var rows = CSV(csv),
           uniqueRegions = {};
       for (var i = 1; i < rows.length; i++) {
