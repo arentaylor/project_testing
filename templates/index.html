@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://bootswatch.com/4/solar/bootstrap.min.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
   <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script> -->
-  <script src="html5slider.js"></script>
+  <script src="./html5slider.js"></script>
   <script type="text/javascript">
   // turn raw csv text into an array of arrays (rows)
   // being sure to reassemble any values that were quoted (and accidentally split)
@@ -76,13 +76,13 @@
         checkLoaded();
       }
     }
-    $.get('./db/gdp_per_capita_ppp_copy.csv',             parseTable(GDP, countriesWithGDP, yearsWithGDP));
-    $.get('./db/life_expectancy_at_birth_copy.csv',       parseTable(LE,  countriesWithLE,  yearsWithLE));
-    $.get('./db/copy_refugee.csv', parseTable(POP, countriesWithPOP, yearsWithPOP));
+    $.get('../db/gdp_per_capita_ppp_copy.csv',             parseTable(GDP, countriesWithGDP, yearsWithGDP));
+    $.get('../db/life_expectancy_at_birth_copy.csv',       parseTable(LE,  countriesWithLE,  yearsWithLE));
+    $.get('../db/copy_refugee.csv', parseTable(POP, countriesWithPOP, yearsWithPOP));
     var colors = [ '#3F4FFF', '#2FBFE5', '#68FF5E', '#E5FF2F', '#FF982F', '#FF2F2F' ],
         regions = [];
         countryRegions = {};
-    $.get('./db/data/copy_refugee.csv', function(csv) {
+    $.get('../db/data/copy_refugee.csv', function(csv) {
       var rows = CSV(csv),
           uniqueRegions = {};
       for (var i = 1; i < rows.length; i++) {
@@ -517,8 +517,6 @@
   }
           </style>
       </head>  
-</head>
-
 <body>
   <div class="container">
     <div class="row">
@@ -544,7 +542,7 @@
       </div>
     </div>
   </div>
-  <h1>UNHCR - The UN Refugee Agency</h1>
+  <center><h1>UNHCR - The UN Refugee Agency</h1>
   <h2>Refugee Population by Destination (1951 - 2017)</h2>
   <div id="container">
       <h2 id="year">year</h2>
@@ -564,7 +562,7 @@
     of work</a> that goes into making something look simple. Wow.</p> -->
   <hr>
   <p>Inspired by <a href="mailto:tom@bloom.io">Tom Carden's</a>  work on <a href="https://www.gapminder.org/">GapMinder</a> Data.</p>
-<br>
+  </center><br>
 <br>
 <br>
 <br>
